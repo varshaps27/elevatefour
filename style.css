@@ -175,6 +175,93 @@ header .navbar{
 .about-section .about-details .social-links:hover{
     color: var(--secondary-color);
 }
+.menu{
+    background: var(--dark-color);
+    color: var(--white-color);
+    padding: 50px 0 100px;
+}
+.menu .menulist{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 110px;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu .menulist .menu-items{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(100% / 3 - 130px);
+}
+.menu .menulist .menu-items .menu-image{
+    max-width: 83%;
+    aspect-ratio: 1;
+}
+.menu .menulist .menu-items .name{
+    margin: 12px 0;
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+.menu .menulist .menu-items .text{
+    font-size: var(--font-size-m)
+}
+.contact{
+    padding: 50px 0 100px;
+    background: var(--light-pink-color);
+}
+.contact .section-content{
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.contact .info .contact-list{
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+    align-items: center;
+}
+.contact .info .contact-list i{
+    font-size: var(--font-size-m);
+}
+.footer{
+    padding: 20px 0;
+    background: var(--dark-color);
+}
+.footer .section-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer :where(.copyright-text,.social,.policy-link){
+    color: var(--white-color);
+    transition: 0.3s ease;
+}
+.footer .social{
+    display: flex;
+    gap: 25px;
+}
+.footer .social .social-links{
+    font-size: var(--font-size-l);
+}
+.footer .social .social-links:hover,.footer .policy-text .policy-link:hover{
+    color: var(--secondary-color);
+}
+.footer .policy-text .separator{
+    color: var(--white-color);
+}
+@media screen and (max-width: 1024px){
+    .menu .menulist{
+        gap: 60px;
+    }
+    .menu .menulist .menu-items{
+        width: calc(100% / 3 - 50px);
+    }
+}
 @media screen and (max-width: 900px) {
     :root{
         --font-size-m: 1rem;
@@ -249,4 +336,26 @@ header .navbar{
         gap: 70px;
         flex-direction: column-reverse;
     }
+    .menu .menulist{
+        gap: 30px;
+    }
+    .menu .menulist .menu-items{
+        width: calc(100% / 2 - 30px);
+    }
+    .menu .menulist .menu-items .menu-image{
+        max-width: 200px;
+
+    }
+    .contact .section-content{
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+}
+@media screen and (max-width:640px) {
+    .menu .menulist{
+        gap: 60px;
+    }
+    .menu .menulist .menu-items{
+        width: 100%;
+    }  
 }
