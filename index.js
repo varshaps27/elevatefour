@@ -1,6 +1,13 @@
-const menuOpenButton= document.querySelector("#menu-open-button");
-const menuCloseButton= document.querySelector("#menu-close-button");
-menuOpenButton.addEventListener("click",()=>{
-    document.body.classList.toggle("show-mobile-menu");
+document.addEventListener('DOMContentLoaded', function () {
+    const body = document.body;
+    const menuOpenButton = document.getElementById('menu-open-button');
+    const menuCloseButton = document.getElementById('menu-close-button');
+
+    menuOpenButton.addEventListener('click', function () {
+        body.classList.add('show-mobile-menu');
+    });
+
+    menuCloseButton.addEventListener('click', function () {
+        body.classList.remove('show-mobile-menu');
+    });
 });
-menuCloseButton.addEventListener("click",()=> menuOpenButton.click());
